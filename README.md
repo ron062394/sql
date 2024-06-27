@@ -8,12 +8,14 @@
 %pip install ipython-sql
 ```
 
-## **Install `ipython-sql` Package**
+## **Load the SQL Extension**
 ``` python
-%pip install ipython-sql
+%load_ext sql
 ```
 
-## **Install `ipython-sql` Package**
+---
+
+## **Create SQLite Database**
 ``` python
-%pip install ipython-sql
+%sql sqlite:///sql-crud.db
 ```
