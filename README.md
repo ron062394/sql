@@ -21,6 +21,7 @@
 ``` python
 %sql sqlite:///sql-crud.db
 ```
+
 ## **Create Table**
 ``` python
 %%sql
@@ -59,5 +60,10 @@ CREATE TABLE IF NOT EXISTS employees (
     ### boolean_column BOOLEAN
     - Description: Stores boolean values (TRUE or FALSE).
     - Usage: Used for fields that represent binary states or conditions, such as status indicators (active, inactive), flags, or logical condition
+```
 
+
+## **Check if the employee table is created successfully**
+``` python
+%sql SELECT name FROM sqlite_master WHERE type='table';
 ```
