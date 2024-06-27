@@ -35,37 +35,29 @@ CREATE TABLE IF NOT EXISTS employees (
 
 
 ## **Other Data Types**
-``` python
-%%sql
-CREATE TABLE sample_table (
-    -- Numeric types
-    id INT PRIMARY KEY,
-    integer_column INT,
-    decimal_column DECIMAL(10, 2),
-    
-    -- Character/String types
-    char_column CHAR(10),
-    varchar_column VARCHAR(255),
-    text_column TEXT,
-    
-    -- Time types
-    time_column TIME,
-    timestamp_column TIMESTAMP,
-    
-    -- Boolean type
-    boolean_column BOOLEAN
-);
+``` md	
+    ### id INT PRIMARY KEY,
+    - Description: Represents whole numbers without fractional components.
+    - Usage: Suitable for storing counts, IDs, or other whole number data.
 
-INSERT INTO sample_table (id, integer_column, decimal_column,
-                          char_column, varchar_column, text_column,
-                          time_column, timestamp_column,
-                          boolean_column)
-VALUES (1, 123, 45.67,
-        'ABC', 'Sample Text', 'Lorem ipsum dolor sit amet.',
-        '10:00:00', '2024-06-30 10:00:00',
-        TRUE),
-       (2, 456, 89.01,
-        'XYZ', 'Another Text', 'Nulla vitae elit libero.',
-        '15:30:00', '2024-07-01 15:30:00',
-        FALSE);
+    ### decimal_column DECIMAL(10, 2),
+    - Represents fixed-point numbers with a specified precision (total digits) and scale (digits to the right of the decimal point).
+    - Usage: Ideal for financial data or where precise calculations with fixed decimal places are required.
+
+    ### char_column CHAR(10),
+    - Description: Fixed-length character strings
+    - Usage: Suitable for fields where data length is consistent, such as postal codes or fixed-format identifiers.
+
+    ### varchar_column VARCHAR(255),
+    - Description: Variable-length character strings.
+    - Usage: Commonly used for text fields with varying lengths, such as names, addresses, or descriptions.
+    
+    ### text_column TEXT,
+    - Description: Variable-length character strings with no specified maximum length.
+    - Usage: Used for large blocks of text where the exact length is unpredictable, such as comments or lengthy descriptions.
+    
+    ### boolean_column BOOLEAN
+    - Description: Stores boolean values (TRUE or FALSE).
+    - Usage: Used for fields that represent binary states or conditions, such as status indicators (active, inactive), flags, or logical condition
+
 ```
