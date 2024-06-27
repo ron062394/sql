@@ -14,8 +14,14 @@
 ```
 
 ---
+---
+
 
 ## **Create SQLite Database**
+``` python
+%sql sqlite:///sql-crud.db
+```
+## **Create Table**
 ``` python
 %sql sqlite:///sql-crud.db
 ```
