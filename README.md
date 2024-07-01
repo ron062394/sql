@@ -67,3 +67,10 @@ CREATE TABLE IF NOT EXISTS employees (
 ``` python
 %sql SELECT name FROM sqlite_master WHERE type='table';
 ```
+
+
+## **Altering Table**
+``` python
+%%sql ALTER TABLE employees
+ADD hire_date DATE;
+```
