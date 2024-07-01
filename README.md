@@ -131,8 +131,17 @@ FROM employees;
 
 
 ## **Updating Data**
+### **Single column**
 ``` python
 %%sql UPDATE employees
 SET salary = 55000.00
+WHERE employee_id = 1;
+```
+### **Single column**
+``` python
+%%sql
+UPDATE employees
+SET salary = 55.00,
+    hire_date = '2024-01-01'
 WHERE employee_id = 1;
 ```
