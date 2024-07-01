@@ -70,7 +70,14 @@ CREATE TABLE IF NOT EXISTS employees (
 
 
 ## **Altering Table**
+### Add column
 ``` python
 %%sql ALTER TABLE employees
 ADD hire_date DATE;
+```
+### Rename column
+``` python
+%%sql ALTER TABLE employees
+RENAME COLUMN hire_date TO hired_date;
+
 ```
