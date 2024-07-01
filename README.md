@@ -174,7 +174,8 @@ WHERE employee_id IN (1, 2);
 
 ## **Deleting Data**
 ``` python
-
+%%sql DELETE FROM employees
+WHERE employee_id = 1;
 ```
 
 
