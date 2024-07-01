@@ -75,9 +75,19 @@ CREATE TABLE IF NOT EXISTS employees (
 %%sql ALTER TABLE employees
 ADD hire_date DATE;
 ```
+``` python
+%%sql
+ALTER TABLE employees
+ADD performance_rating INT;
+```
 ### Rename column
 ``` python
 %%sql ALTER TABLE employees
 RENAME COLUMN hire_date TO hired_date;
-
 ```
+### DELETE column
+``` python
+%%sql ALTER TABLE employees
+DROP COLUMN hire_date;
+```
+
