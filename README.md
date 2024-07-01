@@ -193,4 +193,28 @@ WHERE employee_id = 1;
 
 
 
+## **Notes**
+## **Dates and Time**
+- DATE: Date (e.g., YYYY-MM-DD).
+- TIME: Time of day (e.g., HH:MM:SS).
+- TIMESTAMP/DATETIME: Date and time combined (e.g., YYYY-MM-DD HH:MM:SS).
+``` python
+-- Creating a table with date/time types
+CREATE TABLE date_time_types (
+    id INT PRIMARY KEY,
+    date_column DATE,
+    time_column TIME,
+    timestamp_column TIMESTAMP
+);
+```
+``` python
+-- Inserting sample data into date_time_types
+INSERT INTO date_time_types (id, date_column, time_column, timestamp_column)
+VALUES 
+    (1, '2024-07-01', '12:30:00', '2024-07-01 12:30:00'),
+    (2, '2024-07-02', '15:45:00', '2024-07-02 15:45:00'),
+    (3, '2024-07-03', '09:00:00', '2024-07-03 09:00:00');
+```
+
+
 
