@@ -154,6 +154,24 @@ SET salary = 66000,
 WHERE department = 'Operations';
 ```
 
+### **Multiple Selected Row**
+``` python
+%%sql
+UPDATE employees
+SET salary = CASE
+                WHEN employee_id = 1 THEN 55000
+                WHEN employee_id = 2 THEN 60000
+                ELSE salary
+             END,
+    hired_date = CASE
+                WHEN employee_id = 1 THEN '2024-01-01'
+                WHEN employee_id = 2 THEN '2024-02-01'
+                ELSE hired_date
+               END
+WHERE employee_id IN (1, 2);
+
+```
+
 ## **Deleting Data**
 ``` python
 
