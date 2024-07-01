@@ -116,3 +116,7 @@ INSERT INTO employees (employee_id, first_name, last_name, department, salary, h
 VALUES (5, 'David', 'Wilson', 'Operations', 58000.00, '2024-04-28', 1);
 ```
 
+## **Selecting Data**
+``` python
+%sql SELECT * FROM employees;
+```
