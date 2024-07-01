@@ -91,3 +91,9 @@ RENAME COLUMN hire_date TO hired_date;
 DROP COLUMN hire_date;
 ```
 
+
+## **Check if the employee table is created successfully**
+``` python
+%sql DROP TABLE employees;
+```
+
