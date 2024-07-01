@@ -120,3 +120,10 @@ VALUES (5, 'David', 'Wilson', 'Operations', 58000.00, '2024-04-28', 1);
 ``` python
 %sql SELECT * FROM employees;
 ```
+
+
+## **Selecting Specific Columns**
+``` python
+%%sql SELECT first_name, last_name, department
+FROM employees;
+```
