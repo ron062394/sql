@@ -127,3 +127,12 @@ VALUES (5, 'David', 'Wilson', 'Operations', 58000.00, '2024-04-28', 1);
 %%sql SELECT first_name, last_name, department
 FROM employees;
 ```
+
+
+
+## **Updating Data**
+``` python
+%%sql UPDATE employees
+SET salary = 55000.00
+WHERE employee_id = 1;
+```
