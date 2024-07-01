@@ -92,8 +92,27 @@ DROP COLUMN hire_date;
 ```
 
 
-## **Check if the employee table is created successfully**
+## **Deleting a Table**
 ``` python
 %sql DROP TABLE employees;
+```
+
+## **Inserting Data**
+``` python
+%%sql
+INSERT INTO employees (employee_id, first_name, last_name, department, salary, hire_date, performance_rating)
+VALUES (1, 'John', 'Doe', 'Sales', 50000.00, '2024-04-23', 3);
+
+INSERT INTO employees (employee_id, first_name, last_name, department, salary, hire_date, performance_rating)
+VALUES (2, 'Jane', 'Smith', 'Marketing', 55000.00, '2024-04-25', 4);
+
+INSERT INTO employees (employee_id, first_name, last_name, department, salary, hire_date, performance_rating)
+VALUES (3, 'Michael', 'Johnson', 'Sales', 60000.00, '2024-04-26', 5);
+
+INSERT INTO employees (employee_id, first_name, last_name, department, salary, hire_date, performance_rating)
+VALUES (4, 'Emily', 'Davis', 'Operations', 62000.00, '2024-04-27', 2);
+
+INSERT INTO employees (employee_id, first_name, last_name, department, salary, hire_date, performance_rating)
+VALUES (5, 'David', 'Wilson', 'Operations', 58000.00, '2024-04-28', 1);
 ```
 
