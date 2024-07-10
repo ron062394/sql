@@ -19,18 +19,18 @@
 
 ## **Create SQLite Database**
 ``` python
-%sql sqlite:///sql-crud.db
+%sql sqlite:///abc-corp.db
 ```
 
 ## **Create Table**
 ``` python
 %%sql
 CREATE TABLE IF NOT EXISTS employees (
-    employee_id INT PRIMARY KEY,
+    employee_id INTEGER PRIMARY KEY AUTOINCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    department VARCHAR(50),
-    salary DECIMAL(10, 2) NOT NULL
+    department VARCHAR(50) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL    
 );
 ```
 
@@ -81,27 +81,33 @@ CREATE TABLE IF NOT EXISTS employees (
 %sql SELECT name FROM sqlite_master WHERE type='table';
 ```
 
+## **Check the structure of the table**
+``` python
+%sql PRAGMA table_info('employees');
+```
+
 
 ## **Altering Table**
 ### Add column
 ``` python
 %%sql ALTER TABLE employees
-ADD hire_date DATE;
-```
-``` python
-%%sql
+ADD hiring_date DATE;
+
 ALTER TABLE employees
 ADD performance_rating INT;
+
+ALTER TABLE employees
+ADD birth_date DATE;
 ```
 ### Rename column
 ``` python
 %%sql ALTER TABLE employees
-RENAME COLUMN hire_date TO hired_date;
+RENAME COLUMN hiring_date TO hire_date;
 ```
 ### DELETE column
 ``` python
 %%sql ALTER TABLE employees
-DROP COLUMN hire_date;
+DROP COLUMN birth_date;
 ```
 
 
@@ -147,15 +153,15 @@ FROM employees;
 ### **Single column**
 ``` python
 %%sql UPDATE employees
-SET salary = 55000.00
+SET salary = 55.00
 WHERE employee_id = 1;
 ```
 ### **multiple column**
 ``` python
 %%sql
 UPDATE employees
-SET salary = 55.00,
-    hire_date = '2024-01-01'
+SET salary = 555.00,
+    hired_date = '2024-02-01'
 WHERE employee_id = 1;
 ```
 ### **Multiple row**
@@ -163,26 +169,8 @@ WHERE employee_id = 1;
 %%sql
 UPDATE employees
 SET salary = 66000,
-    hire_date = '2024-12-01'
+    hired_date = '2024-12-01'
 WHERE department = 'Operations';
-```
-
-### **Multiple Selected Row**
-``` python
-%%sql
-UPDATE employees
-SET salary = CASE
-                WHEN employee_id = 1 THEN 55000
-                WHEN employee_id = 2 THEN 60000
-                ELSE salary
-             END,
-    hired_date = CASE
-                WHEN employee_id = 1 THEN '2024-01-01'
-                WHEN employee_id = 2 THEN '2024-02-01'
-                ELSE hired_date
-               END
-WHERE employee_id IN (1, 2);
-
 ```
 
 ## **Deleting Data**
@@ -191,6 +179,10 @@ WHERE employee_id IN (1, 2);
 WHERE employee_id = 1;
 ```
 
+## **Deleting Table**
+``` python
+#%sql DROP TABLE employees;
+```
 
 
 ## **Notes**
