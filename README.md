@@ -13,9 +13,6 @@
 %load_ext sql
 ```
 
----
----
-
 
 ## **Create SQLite Database**
 ``` python
